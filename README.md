@@ -3,6 +3,9 @@ NISQ Benchmarking: Quantum Volume in Practice
 
 The directory `raw_QASM_uncompiled_QV_circuits/` contains the raw uncompiled Quantum Volume circuits, represented as QASM files.
 
+The scripts `transpile_QV_circuits_to_IBMQ_connected_subgraphs.py` and `transpile_QV_circuits_to_ionq_gateset.py` transform the uncompiled QV circuits to the gatesets and connectivities of IBMQ and IonQ devices. Importantly, these scripts save the circuits as QASM files which can then be submitted to the different backends (which may involve other software or circuit representations). 
+
+
 ## Copyright Notice:
 © 2022. Triad National Security, LLC. All rights reserved.
 This program was produced under U.S. Government contract 89233218CNA000001 for Los Alamos
