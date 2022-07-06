@@ -11,6 +11,8 @@ The directory `figures_Quantinuum_cumulative_HOP` contains PDF figures of cumula
 
 The directory `figures_IBMQ_qubit_heatmaps` contains PDF figures of qubit heatmaps of QV success rates on several IBMQ backends. 
 
+The directories `figures_blackbox_rigetti`, `figures_blackbox_OQC`, `figures_blackbox_IonQ` contain black-box cumulative HOP figures on different NISQ devices.
+
 
 ## How to Cite?
 ```latex
