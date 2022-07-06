@@ -5,6 +5,17 @@ The directory `raw_QASM_uncompiled_QV_circuits/` contains the raw uncompiled Qua
 
 The scripts `transpile_QV_circuits_to_IBMQ_connected_subgraphs.py` and `transpile_QV_circuits_to_ionq_gateset.py` transform the uncompiled QV circuits to the gatesets and connectivities of IBMQ and IonQ devices. Importantly, these scripts save the circuits as QASM files which can then be submitted to the different backends (which may involve other software or circuit representations). 
 
+### Results directories:
+
+The directory `figures_Quantinuum_cumulative_HOP` contains PDF figures of cumulative HOP results from the Quantinuum H1-2 device.
+
+The directory `figures_IBMQ_qubit_heatmaps` contains PDF figures of qubit heatmaps of QV success rates on several IBMQ backends. 
+
+
+## How to Cite?
+```latex
+@ARTICLE{9805433,  author={Pelofske, Elijah and BÄrtschi, Andreas and Eidenbenz, Stephan},  journal={IEEE Transactions on Quantum Engineering},   title={Quantum Volume in Practice: What Users Can Expect from NISQ Devices},   year={2022},  volume={},  number={},  pages={1-9},  doi={10.1109/TQE.2022.3184764}}
+```
 
 ## Copyright Notice:
 © 2022. Triad National Security, LLC. All rights reserved.
@@ -44,7 +55,3 @@ OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
 WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
-## References
-[1] Elijah Pelofske, Andreas Bärtschi, Stephan Eidenbenz. (2022) Quantum Volume in Practice: What Users Can Expect from NISQ Devices. arxiv.2203.03816
