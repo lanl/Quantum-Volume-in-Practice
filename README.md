@@ -20,7 +20,7 @@ NISQ Benchmarking: Quantum Volume in Practice
 ### Python scripts to execute circuits on different backends
 
 - `execute_circuits_Quantinuum_H1_2_blackbox.py` Requires installing the Quantinuum API and then specifying the api_url. The script then reads in the raw qasm files and submits the circuits to the Quantinuum H1-2 device. A directory called `Quantinuum_H1_2_results/` is automatically created where the job ids and result histograms are stored. The script terminates it passes the QV test. The default settings that are coded into the script specify 20 shots per circuit, but this can be adjusted by the user. 
-- `execute_circuits_IBMQ_blackbox.py` Executes the QV circuits using the Qiskit `execute` method; i.e. simple blackbox execution of the circuits. 
+- `execute_circuits_IBMQ_blackbox.py` Executes the QV circuits using the Qiskit `execute` method; i.e. simple blackbox execution of the circuits. The job ids are written to direcoctory called `IBMQ_blackbox_execute_results/`, which is automatically created if it does not yet exist. 
 
 ## How to Cite?
 
