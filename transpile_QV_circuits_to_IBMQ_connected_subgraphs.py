@@ -33,6 +33,8 @@ def get_subgraphs(nb_nodes, backend):
 
 # Load in backend information in order to query the device connectivity
 IBMQ.load_account()
+
+#Specify your credentials
 provider = IBMQ.get_provider(hub='', group='', project='')
 device = "ibmq_quito"
 backend = provider.get_backend(device)

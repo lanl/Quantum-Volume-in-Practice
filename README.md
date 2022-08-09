@@ -1,22 +1,47 @@
 # Quantum-Volume-in-Practice
 NISQ Benchmarking: Quantum Volume in Practice
 
-The directory `raw_QASM_uncompiled_QV_circuits/` contains the raw uncompiled Quantum Volume circuits, represented as QASM files.
+### QV circuit directories:
 
-The scripts `transpile_QV_circuits_to_IBMQ_connected_subgraphs.py` and `transpile_QV_circuits_to_ionq_gateset.py` transform the uncompiled QV circuits to the gatesets and connectivities of IBMQ and IonQ devices. Importantly, these scripts save the circuits as QASM files which can then be submitted to the different backends (which may involve other software or circuit representations). 
+- The directory `raw_QASM_uncompiled_QV_circuits/` contains the raw uncompiled Quantum Volume circuits, represented as QASM files.
 
-### Results directories:
+### Directories with figures:
 
-The directory `figures_Quantinuum_cumulative_HOP` contains PDF figures of cumulative HOP results from the Quantinuum H1-2 device.
+- The directory `figures_Quantinuum_cumulative_HOP` contains PDF figures of cumulative HOP results from the Quantinuum H1-2 device.
 
-The directory `figures_IBMQ_qubit_heatmaps` contains PDF figures of qubit heatmaps of QV success rates on several IBMQ backends. 
+- The directory `figures_IBMQ_qubit_heatmaps` contains PDF figures of qubit heatmaps of QV success rates on several IBMQ backends. 
 
-The directories `figures_blackbox_rigetti`, `figures_blackbox_OQC`, `figures_blackbox_IonQ` contain black-box cumulative HOP figures on different NISQ devices.
+- The directories `figures_blackbox_rigetti`, `figures_blackbox_OQC`, `figures_blackbox_IonQ` contain black-box cumulative HOP figures on different NISQ devices.
 
+### Python scripts for compiling the QV circuits for different backends
+
+- The scripts `transpile_QV_circuits_to_IBMQ_connected_subgraphs.py` and `transpile_QV_circuits_to_ionq_gateset.py` transform the uncompiled QV circuits to the gatesets and connectivities of IBMQ and IonQ devices. Importantly, these scripts save the circuits as QASM files which can then be submitted to the different backends (which may involve other software or circuit representations).
+
+### Python scripts to execute circuits on different backends
+
+- `execute_circuits_Quantinuum_H1_2_blackbox.py` Requires installing the Quantinuum API and then specifying the api_url. The script then reads in the raw qasm files and submits the circuits to the Quantinuum H1-2 device. A directory called `Quantinuum_H1_2_results/` is automatically created where the job ids and result histograms are stored. The script terminates it passes the QV test. The default settings that are coded into the script specify 20 shots per circuit, but this can be adjusted by the user. 
+- `execute_circuits_IBMQ_blackbox.py` Executes the QV circuits using the Qiskit `execute` method; i.e. simple blackbox execution of the circuits. 
 
 ## How to Cite?
+
+- Parsed reference:
+```
+E. Pelofske, A. Bärtschi and S. Eidenbenz, "Quantum Volume in Practice: What Users Can Expect From NISQ Devices," in IEEE Transactions on Quantum Engineering, vol. 3, pp. 1-19, 2022, Art no. 3102119, doi: 10.1109/TQE.2022.3184764.
+```
+
+- bibtex reference:
 ```latex
-@ARTICLE{9805433,  author={Pelofske, Elijah and BÄrtschi, Andreas and Eidenbenz, Stephan},  journal={IEEE Transactions on Quantum Engineering},   title={Quantum Volume in Practice: What Users Can Expect from NISQ Devices},   year={2022},  volume={},  number={},  pages={1-9},  doi={10.1109/TQE.2022.3184764}}
+@article{pelofske2022qv,
+  author        = {Pelofske, Elijah and B{\"{a}}rtschi, Andreas and Eidenbenz, Stephan},
+  journal       = {IEEE Transactions on Quantum Engineering},
+  title         = {{Quantum Volume in Practice: What Users Can Expect from NISQ Devices}},
+  year          = {2022},
+  pages         = {3102119},
+  volume        = {3},
+  archiveprefix = {arXiv},
+  doi           = {10.1109/TQE.2022.3184764},
+  eprint        = {2203.03816},
+}
 ```
 
 ## Copyright Notice:
