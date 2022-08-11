@@ -1,0 +1,6 @@
+amazon-braket-default-simulator==1.6.2
+amazon-braket-schemas==1.9.0
+amazon-braket-sdk==1.23.2
+qiskit==0.36.2
+qiskit-terra==0.20.2
+numpy==1.22.4

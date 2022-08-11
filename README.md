@@ -5,6 +5,8 @@ NISQ Benchmarking: Quantum Volume in Practice
 
 - The directory `raw_QASM_uncompiled_QV_circuits/` contains the raw uncompiled Quantum Volume circuits, represented as QASM files.
 
+- The directory `transpiled_circuits_ionq/` contains the transpiled QV circuits targetting the IonQ gateset and connectivity (which is all to all). 
+
 ### Directories with figures:
 
 - The directory `figures_Quantinuum_cumulative_HOP` contains PDF figures of cumulative HOP results from the Quantinuum H1-2 device.
@@ -21,6 +23,11 @@ NISQ Benchmarking: Quantum Volume in Practice
 
 - `execute_circuits_Quantinuum_H1_2_blackbox.py` Requires installing the Quantinuum API and then specifying the api_url. The script then reads in the raw qasm files and submits the circuits to the Quantinuum H1-2 device. A directory called `Quantinuum_H1_2_results/` is automatically created where the job ids and result histograms are stored. The script terminates it passes the QV test. The default settings that are coded into the script specify 20 shots per circuit, but this can be adjusted by the user. 
 - `execute_circuits_IBMQ_blackbox.py` Executes the QV circuits using the Qiskit `execute` method; i.e. simple blackbox execution of the circuits. The job ids are written to direcoctory called `IBMQ_blackbox_execute_results/`, which is automatically created if it does not yet exist. 
+- `execute_circuits_Braket_IonQ_blackbox.py` Executes the QV circuits contained in the directory `transpiled_circuits_ionq/` for IonQ.
+
+### Directories with data
+
+- `results_IonQ/` contains the histogram counts from executing the circuits on the IonQ device through Braket. 
 
 ## How to Cite?
 
