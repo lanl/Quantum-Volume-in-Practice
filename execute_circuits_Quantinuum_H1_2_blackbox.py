@@ -48,6 +48,7 @@ for idx in range(1000):
 		openqasm = qc.qasm()
 		
 		# here blackbox means that we do not heavily optimize the circuit before submitting it. In this case we do not optimize the circuit at all, but the device could optimize the circuit server side. 
+		#The machine naming used in this script has been deprecated - prviously it was HQS-LT-SX, now it is simply H1-2, H1-1, etc. 
 		job_id = qapi.submit_job(openqasm, shots=20, machine='HQS-LT-S2')
 		#Print job id for reference
 		print(job_id)

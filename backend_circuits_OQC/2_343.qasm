@@ -1,0 +1,17 @@
+OPENQASM 2.0;
+include "qelib1.inc";
+qreg node[2];
+creg b[2];
+u3(2.5978164,4.3994438,6.6201924) node[0];
+u3(4.7642149,9.6702182,1.9154943) node[1];
+cx node[0],node[1];
+u3(5.6692937,0,4*pi) node[0];
+u3(pi/2,0,11.468566) node[1];
+cx node[0],node[1];
+u3(6.3322157,5.8233521,4*pi) node[0];
+u3(pi/2,pi/2,4*pi) node[1];
+cx node[0],node[1];
+u3(5.4645078,0,pi) node[0];
+u3(4.3187654,0,5.306939) node[1];
+measure node[0] -> b[0];
+measure node[1] -> b[1];

@@ -5,7 +5,11 @@ NISQ Benchmarking: Quantum Volume in Practice
 
 - The directory `raw_QASM_uncompiled_QV_circuits/` contains the raw uncompiled Quantum Volume circuits, represented as QASM files.
 
-- The directory `transpiled_circuits_ionq/` contains the transpiled QV circuits targetting the IonQ gateset and connectivity (which is all to all). 
+- The directory `transpiled_circuits_ionq/` contains the transpiled QV circuits targetting the IonQ gateset and connectivity (which is all-to-all). 
+
+- `circuits_IBMQ_blackbox/` contains the transpiled QV circuits for IBMQ backends that were executed using the Qiskit `execute` method. These circuits were pulled by their respective job ids - the submitted circuits and the executed circuits are the same. These are also in QASM format. 
+
+- `backend_circuits_OQC/` contains the QASM description of the backend compiled QV circuits - so these are the QASM circuit descriptions returned in the Amazon Braket metadata field. 
 
 ### Directories with figures:
 
@@ -13,7 +17,9 @@ NISQ Benchmarking: Quantum Volume in Practice
 
 - The directory `figures_IBMQ_qubit_heatmaps` contains PDF figures of qubit heatmaps of QV success rates on several IBMQ backends. 
 
-- The directories `figures_blackbox_rigetti`, `figures_blackbox_OQC`, `figures_blackbox_IonQ` contain black-box cumulative HOP figures on different NISQ devices.
+- The directories `figures_blackbox_rigetti`, `figures_blackbox_OQC`, `figures_blackbox_IonQ`, and `figures_Quantinuum_cumulative_HOP` contain black-box cumulative HOP figures on different NISQ devices.
+
+- `figures_IBMQ_connected_subgraphs/` contains the cumulative HOP plots for connected subgraphs on IBMQ devices. 
 
 ### Python scripts for compiling the QV circuits for different backends
 
@@ -27,7 +33,9 @@ NISQ Benchmarking: Quantum Volume in Practice
 
 ### Directories with data
 
-- `results_IonQ/` contains the histogram counts from executing the circuits on the IonQ device through Braket. 
+- `results_IonQ/` contains the measurements from executing the circuits on the IonQ Harmony through Braket. 
+- `results_Quantinuum/` contains the measurements from executing the QV circuits on Quantinuum H1-2
+- `results_IBMQ_blackbox/` contains the measurements from exeuting the QV circuits on IBMQ backends with the Qiskit execute command, this means that transpilation is done on the user end.
 
 ## How to Cite?
 
