@@ -35,11 +35,12 @@ NISQ Benchmarking: Quantum Volume in Practice
 
 ### Directories with data
 
-The majority of the data, which takes quite a bit of storage space, can be found at [this Zenodo link](https://zenodo.org/record/6360668#.Y-tVOcHMKEu) (doi: 10.21227/h5e9-m398)
+The majority of the data, which takes quite a bit of storage space, can be found at [this Zenodo link](https://zenodo.org/record/6360668#.Y-tVOcHMKEu) (doi: 10.21227/h5e9-m398). The remaining data that is not in the Zenodo dataset is contained in these directories (or if the data took up sufficiently little storage it was put here as well): 
 
 - `results_IonQ/` contains the measurements from executing the circuits on the IonQ Harmony through Braket. 
 - `results_Quantinuum/` contains the measurements from executing the QV circuits on Quantinuum H1-2
 - `results_IBMQ_blackbox/` contains the measurements from exeuting the QV circuits on IBMQ backends with the Qiskit execute command, this means that transpilation is done on the user end.
+- `results_Rigetti_subgraph_enumeration/` contains the raw measurements from executing the QV circuits on the two Rigetti backends Aspen-11 and Aspen-M-1. The filename convention is `device_n_idx_SUBGRAPH_`. An example filename is `Aspen-11_n3_idx524_24_25_23_`, which means the data is from Aspen-11, the QV circuit size is 3, the exact QV circuit index (which is consistent with the indexing in `raw_QASM_uncompiled_QV_circuits/`, and qubits `24_25_23` were the qubits used to execute the circuit. These measurements are directly from the Quil job files, which are represented as numpy files. So the direct raw data can be parsed using `numpy.load` for each of these files. 
 
 ## How to Cite?
 
