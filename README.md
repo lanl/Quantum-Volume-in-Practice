@@ -21,6 +21,8 @@ NISQ Benchmarking: Quantum Volume in Practice
 
 - `figures_IBMQ_connected_subgraphs/` contains the cumulative HOP plots for connected subgraphs on IBMQ devices. 
 
+- `figures_Rigetti_subgraph_enumeration/` contains cumulative HOP figures for connected subgraphs of the two Rigetti devices Aspen-M-1 and Aspen-11. The names of the PDF files indicate which qubit subgraph corresponds to each plot. 
+
 ### Python scripts for compiling the QV circuits for different backends
 
 - The scripts `transpile_QV_circuits_to_IBMQ_connected_subgraphs.py` and `transpile_QV_circuits_to_ionq_gateset.py` transform the uncompiled QV circuits to the gatesets and connectivities of IBMQ and IonQ devices. Importantly, these scripts save the circuits as QASM files which can then be submitted to the different backends (which may involve other software or circuit representations).
@@ -32,6 +34,8 @@ NISQ Benchmarking: Quantum Volume in Practice
 - `execute_circuits_Braket_IonQ_blackbox.py` Executes the QV circuits contained in the directory `transpiled_circuits_ionq/` for IonQ.
 
 ### Directories with data
+
+The majority of the data, which takes quite a bit of storage space, can be found at [this Zenodo link](https://zenodo.org/record/6360668#.Y-tVOcHMKEu) (doi: 10.21227/h5e9-m398)
 
 - `results_IonQ/` contains the measurements from executing the circuits on the IonQ Harmony through Braket. 
 - `results_Quantinuum/` contains the measurements from executing the QV circuits on Quantinuum H1-2
