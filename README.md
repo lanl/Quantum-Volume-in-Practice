@@ -42,6 +42,21 @@ The majority of the data, which takes quite a bit of storage space, can be found
 - `results_IBMQ_blackbox/` contains the measurements from exeuting the QV circuits on IBMQ backends with the Qiskit execute command, this means that transpilation is done on the user end.
 - `results_Rigetti_subgraph_enumeration/` contains the raw measurements from executing the QV circuits on the two Rigetti backends Aspen-11 and Aspen-M-1. The filename convention is `device_n_idx_SUBGRAPH_`. An example filename is `Aspen-11_n3_idx524_24_25_23_`, which means the data is from Aspen-11, the QV circuit size is 3, the exact QV circuit index (which is consistent with the indexing in `raw_QASM_uncompiled_QV_circuits/`, and qubits `24_25_23` were the qubits used to execute the circuit. These measurements are directly from the Quil job files, which are represented as numpy files. So the direct raw data can be parsed using `numpy.load` for each of these files. 
 
+## requirements.txt and used Python libraries
+
+This is the original requirements.txt file used at the time of the study:
+```
+amazon-braket-default-simulator==1.6.2
+amazon-braket-schemas==1.9.0
+amazon-braket-sdk==1.23.2
+qiskit==0.36.2
+qiskit-terra==0.20.2
+numpy==1.22.4
+```
+
+Note however, for future reference these libraries will be outdated. The QASM quantum circuits can still be parsed with more modern versions of Qiskit. But, some of the AWS Braket parsing and circuit structure may require using some of these older libraries. 
+
+
 ## How to Cite?
 
 - Parsed reference:
